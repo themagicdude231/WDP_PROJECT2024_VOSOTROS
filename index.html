@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Sheesh</title>
+<link rel="icon" href="icon.jpg" sizes="16x16" type="image/jpg">
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+<!-- the nav of the website -->
+<nav>
+<div id="logo"><img id="pic" src="icon.jpg"></div>
+<div id="WebName"><p>E-Sheesh<sup>TM</sup></p></div>
+<div id="NavList">
+<ol>
+<li><a onclick="openHome()">Home</a></li>
+<li><a onclick="openProdSer()">Product/Service</a></li>
+<li><a onclick="openAbtUs()">About Us</a></li>
+<li><a onclick="openContUs()">Contact Us</a></li>
+<li><a onclick="openCart()">Your Cart</a></li>
+</ol>
+</div>
+</nav>
+<!-- the content of the main page -->
+<!-- the carousel -->
+<div id="Gallery">
+<div id="GallerySlider">
+<input type="radio" name="slide" id="c1" checked>
+<label for="c1">
+<img src="featured1.jpg">
+</label>
+<input type="radio" name="slide" id="c2" >
+<label for="c2">
+<img src="featured2.jpg">
+</label>
+<input type="radio" name="slide" id="c3" >
+<label for="c3">
+<img src="featured3.jpg">
+</label>
+<input type="radio" name="slide" id="c4" >
+<label for="c4">
+<img src="featured4.jpg">
+</label>
+<input type="radio" name="slide" id="c5" >
+<label for="c5">
+<img src="featured5.jpg">
+</label>
+</div>
+</div>
+<!-- the products -->
+<div id="Products">
+<div id="ProductTitle">Our Product</div>
+<div id="Product1">
+<div id="Product1Img"><img src="product1img.jpg"></div>
+<div id="Product1Name">OMEN 15-DC1115tx Gaming Laptop</div>
+<div id="PriceP1">900 $</div>
+<button id="BuyBtn" onclick="openBuy1()">Buy Now</button>
+</div>
+<div id="Product2">
+<div id="Product1Img"><img src="product2img.jpg"></div>
+<div id="Product1Name">MSI GF63 9SC -092PH Red Backlit KB</div>
+<div id="PriceP1">750 $</div>
+<button id="BuyBtn" onclick="openBuy2()">Buy Now</button>
+</div>
+<div id="Product3">
+<div id="Product1Img"><img src="product3img.jpg"></div>
+<div id="Product1Name">G PRO Mechanical Gaming Keyboard</div>
+<div id="PriceP1">500 $</div>
+<button id="BuyBtn" onclick="openBuy3()">Buy Now</button>
+</div>
+<div id="Product4">
+<div id="Product1Img"><img src="product4img.jpg"></div>
+<div id="Product1Name">Razer DeathAdder V3 Pro Wireless</div>
+<div id="PriceP1">650 $</div>
+<button id="BuyBtn" onclick="openBuy4()">Buy Now</button>
+</div>
+</div>
+<!-- for if buy now is press  -->
+<div id="BuyProduct1" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product1img.jpg"></div>
+<div id="ProdName">OMEN 15-DC1115tx Gaming Laptop</div>
+<div id="Price">Price: 900 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Intel Core i7-9750H (9th Gen)<br>
+-  NVIDIA GeForce RTX 2060 6GB VRAM<br>
+- 16 GB DDR4-2666 SDRAM<br>
+- 1 TB HDD 7200 rpm and 256 GB PCIe NVMe M.2 SSD
+<button id="AddToCartBtn" onclick="addToCart('OMEN 15-DC1115tx Gaming Laptop', 900, 'product1img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<div id="BuyProduct2" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product2img.jpg"></div>
+<div id="ProdName">MSI GF63 9SC -092PH Red Backlit KB</div>
+<div id="Price">Price: 750 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Intel Core i5-9300H (9th Gen) Quad-core processor<br>
+-  NVIDIA GeForce GTX 1650 4 GB VRAM<br>
+- 8 GB DDR4-2666 MHz RAM<br>
+- 1 TB HDD 7200 rpm and 256 GB PCIe NVMe M.2 SSD
+<button id="AddToCartBtn" onclick="addToCart('MSI GF63 9SC -092PH Red Backlit KB', 750, 'product2img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<div id="BuyProduct3" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product3img.jpg"></div>
+<div id="ProdName">G PRO Mechanical Gaming Keyboard</div>
+<div id="Price">Price: 500 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Romer-G mechanical switches<br>
+- Durable PBT (Polybutylene terephthalate) keycaps<br>
+- Customizable per-key RGB lighting<br>
+- Tenkeyless design for compactness and portability
+<button id="AddToCartBtn" onclick="addToCart('G PRO Mechanical Gaming Keyboard', 500, 'product3img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<div id="BuyProduct4" style="display: none;">
+<div id="Rectangle">
+<div id="ProdImg"><img src="product4img.jpg"></div>
+<div id="ProdName">Razer DeathAdder V3 Pro Wireless</div>
+<div id="Price">Price: 650 $</div>
+<div id="Specification">Specs</div>
+<div id="Specification2"> - Wireless (2.4 GHz Razer HyperSpeed)<br>
+- True 20,000 DPI sensitivity<br>
+- 8 programmable buttons<br>
+- Up to 70 hours of battery life on a single charge
+<button id="AddToCartBtn" onclick="addToCart('Razer DeathAdder V3 Pro Wireless', 650, 'product4img.jpg')"> Add to Cart </button>
+</div>
+</div>
+</div>
+<!-- product and serevice -->
+<div id="ProdServ" style="display: none;">
+<div id="Products2">
+<div id="ProductTitle">We sell these:</div>
+<div id="Product1">
+<div id="Product1Img"><img src="product1img.jpg"></div>
+<div id="Product1Name">OMEN 15-DC1115tx Gaming Laptop</div>
+<div id="PriceP1">900 $</div>
+<button id="BuyBtn" onclick="openBuy5()">Buy Now</button>
+</div>
+<div id="Product2">
+<div id="Product1Img"><img src="product2img.jpg"></div>
+<div id="Product1Name">MSI GF63 9SC -092PH Red Backlit KB</div>
+<div id="PriceP1">750 $</div>
+<button id="BuyBtn" onclick="openBuy6()">Buy Now</button>
+</div>
+<div id="Product3">
+<div id="Product1Img"><img src="product3img.jpg"></div>
+<div id="Product1Name">G PRO Mechanical Gaming Keyboard</div>
+<div id="PriceP1">500 $</div>
+<button id="BuyBtn" onclick="openBuy7()">Buy Now</button>
+</div>
+<div id="Product4">
+<div id="Product1Img"><img src="product4img.jpg"></div>
+<div id="Product1Name">Razer DeathAdder V3 Pro Wireless</div>
+<div id="PriceP1">650 $</div>
+<button id="BuyBtn" onclick="openBuy8()">Buy Now</button>
+</div>
+</div>
+</div>
+<!-- about us -->
+<div id="AbtUs" style="display: none;">
+<div id="Box">
+<div id="Background">
+<img id="MyPic" src="icon.jpg">
+<p id="AboutTitle">About Website</p>
+<p id="Name">E-Sheesh<sup>TM</p>
+</div>
+<table>
+<tr>
+<td><p id="StudentInfoLB">E-Sheesh<sup>TM</sup> is an E-commerce website that selling<br> gaming products. from laptops, keyboards, to other products
+E-Sheesh<sup>TM</sup> is the one that you can rely on<br> we also provide 5% discount on your purchase</p></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- Contact Us -->
+<div id="ContUs" style="display: none;">
+<div id="Box">
+<div id="Background">
+<img id="MyPic" src="icon.jpg">
+<p id="AboutTitle">Sebastian Vosotros</p>
+<p id="Name">Director of Feedback department at E-Sheesh<sup>TM</sup></p>
+</div>
+<table>
+<tr>
+<td><p id="Info">Company Email:</p></td>
+<td><p>ESheeshEcom@gmail.com.ph</p></td>
+</tr>
+<tr>
+<td><p id="Info">Company Number:</p></td>
+<td><p>555-1329</p></td>
+</tr>
+<tr>
+<td><p id="Info">Company Adress:</p></td>
+<td><p>123 Park Streetwise street Avenue</p></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- Cart -->
+<div id="Cart" style="display: none;">
+<h1>Your Shopping Cart</h1>
+<div id="CartItems"></div>
+<button id="BuyAllbtn" onclick="openBuy()">Buy All</button>
+<button id="ClearAll" onclick="openClear()">Clear All</button>
+</div>
+<script src="javascript.js"></script>
+</body>
+</html>
